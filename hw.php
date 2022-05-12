@@ -149,6 +149,15 @@ function getRandomString($n) {
      */
     $db = [];
     foreach (range(1,10) as $element){
-        $randNumber = rand(0,5);
-        $r
+        $rLine = [];
+        $randNum = rand(0,5);
+        if($randNum > 0){
+            foreach (range(1,$randNum) as $kint){
+                $rLine[]=rand(0,10);
+            }
+        }else {
+            $rLine[]=5;
+        }
+        $db[] = $rLine;
     }
+    print_r($db);
