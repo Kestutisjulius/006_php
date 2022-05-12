@@ -160,4 +160,19 @@ function getRandomString($n) {
         }
         $db[] = $rLine;
     }
-    print_r($db);
+    /** 9. Paskaičiuokite 8 uždavinio masyvo visų reikšmių sumą ir išrūšiuokite masyvą taip,
+     * kad pirmiausiai eitų mažiausios masyvo reikšmės arba jeigu reikšmė yra masyvas, to masyvo reikšmių sumos.
+     */
+    $allSum = 0;
+    asort($db);
+    foreach ($db as $dbV){
+        print_r(  array_sum($dbV) .' ');
+        $allSum += array_sum($dbV);
+
+    }
+    echo '<br>';
+    echo $allSum;
+    echo '<br>';
+
+
+print_r($db);
